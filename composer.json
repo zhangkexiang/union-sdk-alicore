@@ -1,0 +1,37 @@
+{
+    "name": "laravel-dev-common/union-sdk-alicore",
+    "description": "Laravel dev sdk util alicore",
+    "type":"util",
+    "keywords": ["sdk","ali","util"],
+    "license": "MIT",
+    "homepage": "https://github.com/zhangkexiang/union-sdk-alicore",
+    "authors": [
+        {
+            "name": "coding",
+            "email": "zhangkexiang@qingdao1024.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "replace": {
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "files": [
+        ],
+        "psr-4": {
+            "Union\\Sdk\\AliCore\\": "src/"
+        }
+    },
+    "suggest": {
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
+
