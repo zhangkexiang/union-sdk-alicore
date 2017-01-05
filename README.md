@@ -1,3 +1,3 @@
-#union-sdk-sts
-阿里云访问控制sdk
+#union-sdk-alicore
 
+阿里云 sdk 依赖代码
