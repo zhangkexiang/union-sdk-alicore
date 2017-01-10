@@ -28,10 +28,21 @@ use Union\Sdk\AliCore\Exception\ServerException;
 class CoreEntrance
 {
 	public static function init(){
+		if(!defined('ENABLE_HTTP_PROXY')){
+			define('ENABLE_HTTP_PROXY', FALSE);
+		}
+		if(!defined('HTTP_PROXY_IP')){
+			define('HTTP_PROXY_IP', '127.0.0.1');
+		}
+		if(!defined('HTTP_PROXY_PORT')){
+			define('HTTP_PROXY_PORT', '8888');
+		}
 		date_default_timezone_set('PRC');
-		define('ENABLE_HTTP_PROXY', FALSE);
-		define('HTTP_PROXY_IP', '127.0.0.1');
-		define('HTTP_PROXY_PORT', '8888');
+
+		$tmp = EndpointProvider::getEndpoints();
+		if($tmp!=null){
+			return ;
+		}
 
 		$regionIds = array("cn-hangzhou","cn-beijing","cn-qingdao","cn-hongkong","cn-shanghai","us-west-1","cn-shenzhen","ap-southeast-1");
 		$productDomains =array(
